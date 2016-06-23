@@ -56,5 +56,5 @@ func main() {
 	}
 	name, _ := redis.String(conn.Do("GET", *key))
 	fmt.Println("name: ", name)
-	// defer conn.Close()
+	defer conn.Close()
 }
